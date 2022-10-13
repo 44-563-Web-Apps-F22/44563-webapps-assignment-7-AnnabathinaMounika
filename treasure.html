@@ -181,24 +181,24 @@
                 }
             }
         }
-        function randomNumberGenerator(min_value,max_value) {
-            var number = Math.floor(Math.random()*(max_value-min_value+1))+min_value;
-             return (num==12) ? randomNumberGenerator(min_value,max_value) : number;       
+
+
+        function randomNumberGenerator(min_value, max_value) {
+            var number = Math.floor(Math.random() * (max_value - min_value + 1)) + min_value;
+            return (num == 12) ? randomNumberGenerator(min_value, max_value) : number;
         }
         function resetChests() {
-           tresureChestCount=0
-           score = 0
-           treasureLocation = randomNumberGenerator(0,24)
-           console.log(treasureLocation)
-           document.getElementById("chests").innerText = "Number of chests checked is Zero"
-           document.getElementById("score").innerText = "Score is unknown"
-           document.getElementById("help").innerText = "Help report"
+            tresureChestCount = 0
+            score = 0
+            treasureLocation = randomNumberGenerator(0, 24)
+            console.log(treasureLocation)
+            document.getElementById("chests").innerText = "Number of chests checked is Zero"
+            document.getElementById("score").innerText = "Score is unknown"
+            document.getElementById("help").innerText = "Help report"
 
         }
 
     </script>
-
-
 </body>
 
 </html>
