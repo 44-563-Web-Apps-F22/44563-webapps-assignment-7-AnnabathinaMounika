@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cycler Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			background-color: red;
+		}
+
+		.flex-container>div {
+			/*div children of the flex container*/
+			background-color: #f1f1f1;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+		}
+
+		/* Responsive layout */
+		@media (max-width: 600px) {
+			.flex-container {
+				flex-direction: column;
+				background-color: green;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container text-center">
+		<h1>Mounika Annabathina builds a cycler</h1>
+	</div>
+	<br>
+	<div class="flex-container" id="target">
+		<div class="cycler"> row item 1</div>
+		<div class="cycler"> row item 2</div>
+		<div class="cycler"> row item 3</div>
+	</div>
+	<br>
+	<label for="inputElement">Please Type Something <br></label>
+	<input class="form-control" type="text" name="input" id="inputElement" value="">
+	<br>
+	<p class="message">
+		Press the button to create a new element of type of the input
+	</p>
+	<div class="container text-center">
+        <button class="btn btn-warning" type="submit" onclick="makeNewDiv()">Add Value</button>
+		<button class="btn btn-danger" type="submit" onclick="get()">Get</button>
+		<button class="btn btn-success" type="submit" onclick="spin()">Spin</button>
+		<button class="btn btn-success" type="submit" onclick="swap()">Swap</button>
+	</div>
+	</div>
+	<script>
+		function makeNewDiv() {
+			let ele = document.createElement("div")
+			let val = document.getElementById("inputElement").value
+			ele.innerHTML= val
+			ele.className="cycler"
+			let con= document.getElementById("target")
+			con.appendChild(ele)
+		}
+	</script>
+	<script>
+		function get() {
+			let citems=document.getElementsByClassName("cycler")
+			if(citems.length>0)
+			{
+				citems[citems.length-1].remove()
+			}
+		}
+		function spin() {
+			let citems=document.getElementsByClassName("cycler")
+			if(citems.length>1)
+			{
+				ritem=citems[citems.length-1]
+				citems[citems.length-1].remove()
+				let con1 = document.getElementById("target")
+				con1.insertBefore(ritem,con1.firstChild)
+			}
+		}
+		function swap() {
+			let citems=document.getElementsByClassName("cycler")
+			let min_value =0
+			let max_value = citems.length
+			let rand_value1=Math.floor(Math.random()*(max_value-min_value))+min_value;
+			let rand_value2=Math.floor(Math.random()*(max_value-min_value))+min_value;
+			if((rand_value1!=rand_value2)&&(max_value>1)) {
+				let itemvalue1 = citems[rand_value1]
+				let itemvalue2 = citems[rand_value2]
+				let con=document.getElementById("target")
+				if(rand_value1>rand_value2) {
+					citems[rand_value1].remove()
+					citems[rand_value2].remove()
+				}
+				else{
+					citems[rand_value2].remove()
+					citems[rand_value1].remove()
+				}
+				con.insertBefore(itemvalue2,citems[rand_value1])
+				con.insertBefore(itemvalue1,citems[rand_value2])
+
+			}
+		}
+	</script>
+</body>
+</html>

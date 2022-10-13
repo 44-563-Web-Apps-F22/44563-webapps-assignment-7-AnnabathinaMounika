@@ -1,118 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Treasurehunt Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-    body {background-color:bisque;}
-    p {background-color:grey;}
-    div {background-color:antiquewhite;}
-    img {height: 100px;width: 100px;}
-  </style>
+    <title>Treasurehunt Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        p {
+            background-color: grey;
+        }
+
+        div {
+            background-color: antiquewhite;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
 </head>
+
 <body>
     <h2>Treasure hunt by Mounika Annabathina</h2>
-    <div style ="color:blue">Click on the chests to search for treasure</p>
-    <p id="chests" style="color:maroon">Number of chests checked is zero.</p>
-    <p id="score"  style="color:maroon">Score is unknown.</p>
-    <p id="help"   style="color:maroon">Help report</p>
-     </div>
-     <div class="container">
+    <div style="color:blue">Click on the chests to search for treasure</p>
+        <p id="chests" style="color:maroon">Number of chests checked is zero.</p>
+        <p id="score" style="color:maroon">Score is unknown.</p>
+        <p id="help" style="color:maroon">Help report</p>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure0" onclick="check(0)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure1" onclick="check(1)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
-            </div> 
-            <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure2" onclick="check(2)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure3" onclick="check(3)" alt="treasure chest">
+            </div>
+            <div class="col">
+                <img src="treasurechest.jpg" id="treasure4" onclick="check(4)" alt="treasure chest">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure5" onclick="check(5)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure6" onclick="check(6)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure7" onclick="check(7)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure8" onclick="check(8)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure9" onclick="check(9)" alt="treasure chest">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure10" onclick="check(10)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure11" onclick="check(11)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="help.jpg" alt="help image">
+                <img src="help.jpg" id="help" onclick="help()" alt="help image">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure13" onclick="check(13)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure14" onclick="check(14)" alt="treasure chest">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure15" onclick="check(15)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure16" onclick="check(16)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure17" onclick="check(17)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure18" onclick="check(18)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure19" onclick="check(19)" alt="treasure chest">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure20" onclick="check(20)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure21" onclick="check(21)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure22" onclick="check(22)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure23" onclick="check(23)" alt="treasure chest">
             </div>
             <div class="col">
-                <img src="treasurechest.jpg" alt="treasure chest">
+                <img src="treasurechest.jpg" id="treasure24" onclick="check(24)" alt="treasure chest">
             </div>
         </div>
-     </div>
-  
+    </div>
+    <br>
+    <script>
+        const ids = ["treasure0", "treasure1", "treasure2", "treasure3", "treasure4", "treasure5", "treasure6", "treasure7", "treasure8", "treasure9", "treasure10", "treasure11", "help", "treasure13", "treasure14", "treasure15", "treasure16", "treasure17", "treasure18", "treasure19", "treasure20", "treasure21", "treasure22", "treasure23", "treasure24"]
+        let chestCount = 0
+        let score = 0
+        let lastCheck = 12
+        let treasureLocation = 18
+        function check(position) {
+            img = document.getElementById(ids[position])
+            if (position == treasureLocation) {
+                img.src = "treasure.jpg"
+            }
+            else {
+                img.src = "sad.jpg"
+            }
+            chestCount += 1
+            score += 1
+            document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
+            document.getElementById("score").innerHTML = "Score is " + score;
+            lastCheck = position;
+        }
+        function help() 
+        {
+            lastCheck_rowvalue = parseInt(lastCheck / 5)
+            lastCheck_colvalue = parseInt(lastCheck % 5)
+            treasureLocation_rowvalue = parseInt(treasureLocation / 5)
+            treasureLocation_colvalue = parseInt(treasureLocation % 5)
+            score = score + 2
+            document.getElementById("score").innerHTML = "Score is " + score
+            if (lastCheck_rowvalue == treasureLocation_rowvalue) {
+                if (lastCheck_colvalue < treasureLocation_colvalue) {
+                    document.getElementById("help").innerHTML = "Right"
+                }
+                else if (lastCheck_colvalue > treasureLocation_colvalue) {
+                    document.getElementById("help").innerHTML = "Left"
+                }
+                else {
+                    document.getElementById("help").innerHTML = "Sorry,no help available"
+
+                }
+            }
+            else if (lastCheck_colvalue == treasureLocation_colvalue) 
+            {
+                if (lastCheck_rowvalue < treasureLocation_rowvalue) {
+                    document.getElementById("help").innerHTML = "Down"
+                }
+                else if (lastCheck_rowvalue > treasureLocation_rowvalue) {
+                    document.getElementById("help").innerHTML = "Up"
+                }
+                else {
+                    document.getElementById("help").innerHTML = "Sorry,no help available"
+                }
+            }
+        }
+        function randomNumberGenerator(min_value,max_value) {
+            var number = Math.floor(Math.random()*(max_value-min_value+1))+min_value;
+             return (num==12) ? randomNumberGenerator(min_value,max_value) : number;       
+        }
+        function resetChests() {
+           tresureChestCount=0
+           score = 0
+           treasureLocation = randomNumberGenerator(0,24)
+           console.log(treasureLocation)
+           document.getElementById("chests").innerText = "Number of chests checked is Zero"
+           document.getElementById("score").innerText = "Score is unknown"
+           document.getElementById("help").innerText = "Help report"
+
+        }
+
+    </script>
+
+
 </body>
+
 </html>
